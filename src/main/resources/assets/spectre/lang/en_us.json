@@ -18,7 +18,7 @@
 
   "text.autoconfig.spectre.title": "Spectre Config",
   "text.autoconfig.spectre.option.allowInsomnia": "Allow Insomnia",
-  "text.autoconfig.spectre.option.daysUntilInsomniaTakesAffect": "Days Until Insomnia Takes Affect",
+  "text.autoconfig.spectre.option.daysUntilInsomniaTakesAffect": "Days Until Insomnia Takes Effect",
   "text.autoconfig.spectre.option.allowEndSpawning": "Phantoms Spawning in The End",
   "text.autoconfig.spectre.option.endSpawnWeight": "Spawn Rate of Phantoms in The End",
   "text.autoconfig.spectre.option.minEndSpawnSize": "Minimum Group Size of Phantoms That Spawn in The End",
