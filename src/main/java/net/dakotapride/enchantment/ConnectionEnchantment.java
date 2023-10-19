@@ -5,6 +5,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
 public class ConnectionEnchantment extends Enchantment {
     public ConnectionEnchantment(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
@@ -23,7 +24,7 @@ public class ConnectionEnchantment extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof SpectreScytheItem;
+        return stack.getItem() instanceof SpectreScytheItem || stack.getItem() instanceof SwordItem;
     }
 
     @Override
