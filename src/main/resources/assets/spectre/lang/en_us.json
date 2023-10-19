@@ -13,7 +13,7 @@
   "enchantment.spectre.connection": "Connection",
   "enchantment.spectre.spiritual_leech": "Spiritual Leech",
 
-  "enchantment.spectre.gazing.desc": "Inflicts the target with Pursuing",
+  "enchantment.spectre.gazing.desc": "Inflicts the target with Pursuing if affected by Enlightened",
   "enchantment.spectre.cultist.desc": "Inflicts the target with Enlightened",
   "enchantment.spectre.blood_rush.desc": "Provides levels of Strength in the correct conditions",
   "enchantment.spectre.adrift.desc": "Provides Slow Falling",
