@@ -13,6 +13,14 @@
   "enchantment.spectre.connection": "Connection",
   "enchantment.spectre.spiritual_leech": "Spiritual Leech",
 
+  "enchantment.spectre.gazing.desc": "Inflicts the target with Pursuing",
+  "enchantment.spectre.cultist.desc": "Inflicts the target with Enlightened",
+  "enchantment.spectre.blood_rush.desc": "Provides levels of Strength in the correct conditions",
+  "enchantment.spectre.adrift.desc": "Provides Slow Falling",
+  "enchantment.spectre.cloaking.desc": "Makes the player Invisible without particle effects",
+  "enchantment.spectre.connection.desc": "Acts as an additional Looting enchantment for certain drops",
+  "enchantment.spectre.spiritual_leech.desc": "Leeches health from Phantoms",
+
   "effect.spectre.enlightened": "Enlightened",
   "effect.spectre.pursuing": "Pursuing",
 
