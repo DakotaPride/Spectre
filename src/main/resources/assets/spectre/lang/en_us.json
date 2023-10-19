@@ -1,0 +1,29 @@
+{
+  "item.spectre.ghoul_silk": "Ghoul Silk",
+  "item.spectre.phantom_eye": "Phantom Eye",
+
+  "item.spectre.unwearied_antique": "Unwearied Antique",
+  "item.spectre.spectre_scythe": "Spectre Scythe",
+
+  "enchantment.spectre.gazing": "Gazing",
+  "enchantment.spectre.cultist": "Cultist",
+  "enchantment.spectre.blood_rush": "Blood Rush",
+  "enchantment.spectre.adrift": "Adrift",
+  "enchantment.spectre.cloaking": "Cloaking",
+  "enchantment.spectre.connection": "Connection",
+  "enchantment.spectre.spiritual_leech": "Spiritual Leech",
+
+  "effect.spectre.enlightened": "Enlightened",
+  "effect.spectre.pursuing": "Pursuing",
+
+  "text.autoconfig.spectre.title": "Spectre Config",
+  "text.autoconfig.spectre.option.allowInsomnia": "Allow Insomnia",
+  "text.autoconfig.spectre.option.daysUntilInsomniaTakesAffect": "Days Until Insomnia Takes Affect",
+  "text.autoconfig.spectre.option.allowEndSpawning": "Phantoms Spawning in The End",
+  "text.autoconfig.spectre.option.endSpawnWeight": "Spawn Rate of Phantoms in The End",
+  "text.autoconfig.spectre.option.minEndSpawnSize": "Minimum Group Size of Phantoms That Spawn in The End",
+  "text.autoconfig.spectre.option.maxEndSpawnSize": "Maximum Group Size of Phantoms That Spawn in The End",
+  "text.autoconfig.spectre.option.pursuingEffectSeconds": "Pursuing effect inflicted by Gazing duration",
+  "text.autoconfig.spectre.option.antiqueCooldown": "Unwearied Antique cooldown duration",
+  "text.autoconfig.spectre.option.bloodRushStrengthDuration": "Strength from Blood Rush duration"
+}

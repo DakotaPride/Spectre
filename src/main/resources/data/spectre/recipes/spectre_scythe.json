@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##A",
+    "#XS",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "S": {
+      "item": "spectre:ghoul_silk"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "spectre:phantom_eye"
+    }
+  },
+  "result": {
+    "item": "spectre:spectre_scythe",
+    "count": 1
+  }
+}

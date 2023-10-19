@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "spectre",
+	"version": "${version}",
+	"name": "Spectre",
+	"description": "Improvements (or not) to Phantoms! Reworked Mechanics, new items, and more!",
+	"authors": [
+		"DakotaPride"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/spectre",
+		"sources": "https://github.com/DakotaPride/Spectre"
+	},
+	"license": "MIT",
+	"icon": "assets/spectre/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.dakotapride.SpectreMain"
+		],
+		"modmenu": [
+			"net.dakotapride.config.SpectreModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"spectre.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*",
+		"cloth-config":">=12.0.109"
+	}
+}

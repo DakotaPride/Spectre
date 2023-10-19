@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "spectre:phantom_eye"
+    },
+    {
+      "item": "spectre:ghoul_string"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    }
+  ],
+  "result": {
+    "item": "spectre:unwearied_antique"
+  }
+}
