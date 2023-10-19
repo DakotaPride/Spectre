@@ -13,7 +13,7 @@ public class SpectreConfig implements ConfigData {
     public boolean allowInsomnia = true;
 
     @Comment("Amount of days before Phantoms can start spawning due to insomnia")
-    public int daysUntilInsomniaTakesAffect = 3;
+    public int daysUntilInsomniaTakesAffect = 5;
 
     @Comment("Determines if Phantoms spawn naturally in the End dimension")
     public boolean allowEndSpawning = true;
