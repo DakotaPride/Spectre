@@ -58,40 +58,40 @@ public abstract class PhantomSpawnerMixin implements Spawner {
 		FluidState fluidState;
 		PlayerEntity player;
 
-		while (playerList.hasNext()) {
-			player = (PlayerEntity)playerList.next();
-			if (!player.isSpectator()) {
-				ServerStatHandler serverStatsCounter = ((ServerPlayerEntity) player).getStatHandler();
-				int j = Math.clamp(serverStatsCounter.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, 2147483647);
-				if (random.nextInt(j) > this.getInsomniaTicks) {
-					BlockPos blockPos = player.getBlockPos();
-					if (blockPos.getY() >= world.getSeaLevel() && world.isSkyVisible(blockPos)) {
-						do {
-							blockPos2 = blockPos.up(20 + random.nextInt(15)).east(-10 + random.nextInt(21)).south(-10 + random.nextInt(21));
-							blockState = world.getBlockState(blockPos2);
-							fluidState = world.getFluidState(blockPos2);
-						} while (!SpawnHelper.isClearForSpawn(world, blockPos2, blockState, fluidState, EntityType.PHANTOM));
-						EntityData data = null;
-						difficulty = world.getLocalDifficulty(blockPos);
-						int l = 1 + random.nextInt(((Math.clamp(serverStatsCounter.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, 2147483647) - (this.getInsomniaTicks)) / 24000)+ 1);
+		if (world.isDay()) {
+			return 0;
+		} else {
+			while (playerList.hasNext()) {
+				player = (PlayerEntity)playerList.next();
+				if (!player.isSpectator()) {
+					ServerStatHandler serverStatsCounter = ((ServerPlayerEntity) player).getStatHandler();
+					int j = Math.clamp(serverStatsCounter.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, 2147483647);
+					if (random.nextInt(j) > this.getInsomniaTicks) {
+						BlockPos blockPos = player.getBlockPos();
+						if (blockPos.getY() >= world.getSeaLevel() && world.isSkyVisible(blockPos)) {
+							do {
+								blockPos2 = blockPos.up(20 + random.nextInt(15)).east(-10 + random.nextInt(21)).south(-10 + random.nextInt(21));
+								blockState = world.getBlockState(blockPos2);
+								fluidState = world.getFluidState(blockPos2);
+							} while (!SpawnHelper.isClearForSpawn(world, blockPos2, blockState, fluidState, EntityType.PHANTOM));
+							EntityData data = null;
+							difficulty = world.getLocalDifficulty(blockPos);
+							int l = 1 + random.nextInt(((Math.clamp(serverStatsCounter.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, 2147483647) - (this.getInsomniaTicks)) / 24000)+ 1);
 
-						for (int m = 0; m < l; ++m) {
-							PhantomEntity phantom = EntityType.PHANTOM.create(world);
+							for (int m = 0; m < l; ++m) {
+								PhantomEntity phantom = EntityType.PHANTOM.create(world);
 
-							assert phantom != null;
-							phantom.refreshPositionAndAngles(blockPos2, 0.0F, 0.0F);
-							data = phantom.initialize(world, difficulty, SpawnReason.NATURAL, data, null);
-							world.spawnEntityAndPassengers(phantom);
+								assert phantom != null;
+								phantom.refreshPositionAndAngles(blockPos2, 0.0F, 0.0F);
+								data = phantom.initialize(world, difficulty, SpawnReason.NATURAL, data, null);
+								world.spawnEntityAndPassengers(phantom);
+							}
+							phantomsSpawned += l;
 						}
-						phantomsSpawned += l;
 					}
 				}
 			}
-		}
 
-		if (world.getAmbientDarkness() < 5 && world.getDimension().hasSkyLight()) {
-			return 0;
-		} else {
 			return phantomsSpawned;
 		}
 	}
