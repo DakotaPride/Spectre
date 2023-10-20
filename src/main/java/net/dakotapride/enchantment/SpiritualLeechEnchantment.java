@@ -1,6 +1,6 @@
 package net.dakotapride.enchantment;
 
-import net.dakotapride.item.SpectreScytheItem;
+import net.dakotapride.item.SpectreUtils;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -23,7 +23,7 @@ public class SpiritualLeechEnchantment extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof SpectreScytheItem;
+        return SpectreUtils.canApply$SpectreScythe(stack) || SpectreUtils.canApply$IchorScythe(stack);
     }
 
     @Override
@@ -33,6 +33,6 @@ public class SpiritualLeechEnchantment extends Enchantment {
 
     @Override
     public boolean isAvailableForRandomSelection() {
-        return false;
+        return true;
     }
 }

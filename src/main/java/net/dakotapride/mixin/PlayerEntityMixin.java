@@ -1,5 +1,6 @@
 package net.dakotapride.mixin;
 
+import net.dakotapride.registry.SpectreEffects;
 import net.dakotapride.registry.SpectreEnchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityType;

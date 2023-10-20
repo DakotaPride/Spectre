@@ -15,6 +15,7 @@ public class SpectreItems {
     public static Item GHOUL_SILK;
     public static Item PHANTOM_EYE;
     public static Item SPECTRE_SCYTHE;
+    public static Item SCYTHE_OF_ICHOR;
     public static Item UNWEARIED_ANTIQUE;
 
     public static void items() {
@@ -24,6 +25,8 @@ public class SpectreItems {
                 new Item(new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
         SPECTRE_SCYTHE = Registry.register(Registries.ITEM, SpectreMain.createResource("spectre_scythe"),
                 new SpectreScytheItem(new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+        SCYTHE_OF_ICHOR = Registry.register(Registries.ITEM, SpectreMain.createResource("ichor_scythe"),
+                new ScytheOfIchorItem(new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
 
         UNWEARIED_ANTIQUE = Registry.register(Registries.ITEM, SpectreMain.createResource("unwearied_antique"),
                 new UnweariedAntiqueItem(new FabricItemSettings().fireproof().maxCount(1).maxDamage(24).rarity(Rarity.RARE)));
@@ -32,6 +35,8 @@ public class SpectreItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(PHANTOM_EYE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.add(SPECTRE_SCYTHE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(SPECTRE_SCYTHE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.add(SCYTHE_OF_ICHOR));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(SCYTHE_OF_ICHOR));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(UNWEARIED_ANTIQUE));
     }
 

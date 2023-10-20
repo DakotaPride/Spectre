@@ -58,15 +58,15 @@ public class SpectreScytheItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (ScytheUtils.hasCultistEnchantment(stack) && target instanceof PlayerEntity player && player.getHealth() <= 10) {
+        if (SpectreUtils.hasCultistEnchantment(stack) && target instanceof PlayerEntity player && player.getHealth() <= 10) {
             target.addStatusEffect(new StatusEffectInstance(SpectreEffects.ENLIGHTENED, 300, 0));
         }
 
-        if (ScytheUtils.hasGazingEnchantment(stack) && target instanceof PlayerEntity) {
+        if (SpectreUtils.hasGazingEnchantment(stack) && target instanceof PlayerEntity) {
             target.addStatusEffect(new StatusEffectInstance(SpectreEffects.PURSUING, SpectreConfig.getInstance().pursuingEffectSeconds * 20, 0));
         }
 
-        if (ScytheUtils.hasSpiritualLeech(stack) && target instanceof PhantomEntity) {
+        if (SpectreUtils.hasSpiritualLeechEnchantment(stack) && target instanceof PhantomEntity) {
             int restore = (int) Math.max(Math.ceil(target.getMaxHealth() / 5), 4);
             restore = attacker.getEntityWorld().random.nextInt(restore + 1);
             if (restore > 0) {

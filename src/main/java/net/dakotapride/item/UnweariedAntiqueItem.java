@@ -1,5 +1,6 @@
 package net.dakotapride.item;
 
+import net.dakotapride.config.SpectreConfig;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -24,7 +25,21 @@ public class UnweariedAntiqueItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ScytheUtils.applyBloodRushEffects(user, this.getDefaultStack());
+        ItemStack stack = user.getStackInHand(hand);
+
+        if (SpectreUtils.canApplyStrengthFromBloodRush(user)) {
+            SpectreUtils.applyBloodRushEffects(user);
+            stack.damage(1, user, p -> p.sendToolBreakStatus(Hand.OFF_HAND));
+            user.getItemCooldownManager().set(this, SpectreConfig.getInstance().antiqueCooldown * 20);
+        }
+
+        if (SpectreUtils.canApplyStrengthFromSanguinary(user)) {
+            SpectreUtils.applySanguinaryEffects(user);
+            stack.damage(2, user, p -> p.sendToolBreakStatus(Hand.OFF_HAND));
+            user.getItemCooldownManager().set(this, SpectreConfig.getInstance().antiqueCooldown * 20);
+        }
+
+        return TypedActionResult.fail(stack);
     }
 
     @Override

@@ -3,6 +3,7 @@
   "package": "net.dakotapride.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EnchantmentHelperMixin",
     "EntityMixin",
     "LivingEntityMixin",
     "PhantomSpawnerMixin",

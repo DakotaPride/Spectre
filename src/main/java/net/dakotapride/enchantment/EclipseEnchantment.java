@@ -6,8 +6,8 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 
-public class BloodRushEnchantment extends Enchantment {
-    public BloodRushEnchantment(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+public class EclipseEnchantment extends Enchantment {
+    public EclipseEnchantment(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 
@@ -23,7 +23,7 @@ public class BloodRushEnchantment extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return SpectreUtils.canApply$SpectreScythe(stack);
+        return SpectreUtils.canApply$IchorScythe(stack);
     }
 
     @Override

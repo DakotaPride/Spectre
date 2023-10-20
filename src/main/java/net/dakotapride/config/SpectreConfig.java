@@ -36,6 +36,9 @@ public class SpectreConfig implements ConfigData {
     @Comment("Determines how many seconds Strength from Blood Rush lasts")
     public int bloodRushStrengthDuration = 15;
 
+    @Comment("Determines how many seconds Strength from Sanguinary lasts")
+    public int sanguinaryStrengthDuration = 10;
+
     public static SpectreConfig getInstance() {
         return AutoConfig.getConfigHolder(SpectreConfig.class).getConfig();
     }

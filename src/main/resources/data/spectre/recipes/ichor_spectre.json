@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "AEA",
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "E": {
+      "item": "spectre:spectre_scythe"
+    },
+    "A": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "item": "spectre:ichor_spectre",
+    "count": 1
+  }
+}

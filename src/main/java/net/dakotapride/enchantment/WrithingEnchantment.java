@@ -6,14 +6,14 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 
-public class BloodRushEnchantment extends Enchantment {
-    public BloodRushEnchantment(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+public class WrithingEnchantment extends Enchantment {
+    public WrithingEnchantment(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 1;
     }
 
     @Override
@@ -22,8 +22,13 @@ public class BloodRushEnchantment extends Enchantment {
     }
 
     @Override
+    protected boolean canAccept(Enchantment other) {
+        return !(other instanceof SanguinaryEnchantment) && super.canAccept(other);
+    }
+
+    @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return SpectreUtils.canApply$SpectreScythe(stack);
+        return SpectreUtils.canApply$IchorScythe(stack);
     }
 
     @Override

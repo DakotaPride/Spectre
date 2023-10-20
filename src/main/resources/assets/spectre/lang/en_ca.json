@@ -4,6 +4,7 @@
 
   "item.spectre.unwearied_antique": "Unwearied Antique",
   "item.spectre.spectre_scythe": "Spectre Scythe",
+  "item.spectre.ichor_scythe": "Scythe of Ichor",
 
   "enchantment.spectre.gazing": "Gazing",
   "enchantment.spectre.cultist": "Cultist",
@@ -12,6 +13,11 @@
   "enchantment.spectre.cloaking": "Cloaking",
   "enchantment.spectre.connection": "Connection",
   "enchantment.spectre.spiritual_leech": "Spiritual Leech",
+  "enchantment.spectre.vigilant": "Vigilant",
+  "enchantment.spectre.eclipse": "Eclipse",
+  "enchantment.spectre.writhing": "Writhing",
+  "enchantment.spectre.sanguinary": "Sanguinary",
+  "enchantment.spectre.nemesis": "Nemesis",
 
   "enchantment.spectre.gazing.desc": "Inflicts the target with Pursuing if affected by Enlightened",
   "enchantment.spectre.cultist.desc": "Inflicts the target with Enlightened",
@@ -20,9 +26,22 @@
   "enchantment.spectre.cloaking.desc": "Makes the player Invisible without particle effects",
   "enchantment.spectre.connection.desc": "Acts as an additional Looting enchantment for certain drops",
   "enchantment.spectre.spiritual_leech.desc": "Leeches health from Phantoms",
+  "enchantment.spectre.vigilant.desc": "Provides Speed & Night Vision",
+  "enchantment.spectre.eclipse.desc": "Provides scaling Max Health",
+  "enchantment.spectre.writhing.desc": "Slowly damages the user, but provides Strength",
+  "enchantment.spectre.sanguinary.desc": "Provides Strength 5 in the correct conditions",
+  "enchantment.spectre.nemesis.desc": "Inflicts the target with Infliction",
+
+  "death.attack.spectre.pursuing": "%s was pursued and taken care of",
+  "death.attack.spectre.pursuing.player": "%s was pursued and taken care of by %s",
+  "death.attack.spectre.infliction": "%s has been inflicted horribly",
+  "death.attack.spectre.infliction.player": "%s has been inflicted horribly by %s",
+  "death.attack.spectre.writhing": "%s is no longer writhing in pain",
+  "death.attack.spectre.writhing.player": "%s is no longer writhing in pain caused by %s",
 
   "effect.spectre.enlightened": "Enlightened",
   "effect.spectre.pursuing": "Pursuing",
+  "effect.spectre.infliction": "Infliction",
 
   "text.autoconfig.spectre.title": "Spectre Config",
   "text.autoconfig.spectre.option.allowInsomnia": "Allow Insomnia",
@@ -33,5 +52,6 @@
   "text.autoconfig.spectre.option.maxEndSpawnSize": "Maximum Group Size of Phantoms That Spawn in The End",
   "text.autoconfig.spectre.option.pursuingEffectSeconds": "Pursuing effect inflicted by Gazing duration",
   "text.autoconfig.spectre.option.antiqueCooldown": "Unwearied Antique cooldown duration",
-  "text.autoconfig.spectre.option.bloodRushStrengthDuration": "Strength from Blood Rush duration"
+  "text.autoconfig.spectre.option.bloodRushStrengthDuration": "Strength from Blood Rush duration",
+  "text.autoconfig.spectre.option.sanguinaryStrengthDuration": "Strength from Sanguinary duration"
 }
