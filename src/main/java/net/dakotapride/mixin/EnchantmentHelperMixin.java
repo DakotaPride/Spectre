@@ -33,7 +33,7 @@ public class EnchantmentHelperMixin {
             list.remove(list.size() - 1);
         } else if (enchantment == SpectreEnchantments.CLOAKING && !SpectreUtils.canApply$SpectreScythe(stack) && !list.isEmpty()) {
             list.remove(list.size() - 1);
-        } else if (enchantment == SpectreEnchantments.CONNECTION && !SpectreUtils.canApply$SpectreScythe(stack) && !list.isEmpty()) {
+        } else if (enchantment == SpectreEnchantments.CONNECTION && !SpectreUtils.canApply$ScytheOrSword(stack) && !list.isEmpty()) {
             list.remove(list.size() - 1);
         } else if (enchantment == SpectreEnchantments.CULTIST && !SpectreUtils.canApply$SpectreScythe(stack) && !list.isEmpty()) {
             list.remove(list.size() - 1);

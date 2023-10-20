@@ -11,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.PhantomEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
 public class SpectreUtils {
     static Enchantment gazing = SpectreEnchantments.GAZING;
@@ -82,6 +83,10 @@ public class SpectreUtils {
 
     public static boolean canApply$SpectreScythe(ItemStack stack) {
         return stack.getItem() instanceof SpectreScytheItem;
+    }
+
+    public static boolean canApply$ScytheOrSword(ItemStack stack) {
+        return stack.getItem() instanceof SpectreScytheItem || stack.getItem() instanceof SwordItem;
     }
 
     public static boolean canApply$IchorScythe(ItemStack stack) {
