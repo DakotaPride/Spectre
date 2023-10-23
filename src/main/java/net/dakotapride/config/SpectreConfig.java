@@ -13,7 +13,7 @@ public class SpectreConfig implements ConfigData {
     public boolean allowInsomnia = true;
 
     @Comment("Determines if Phantoms spawn an ABNORMAL amount")
-    public boolean insanityPhantoms = true;
+    public boolean insanityPhantoms = false;
 
     @Comment("Amount of days before Phantoms can start spawning due to insomnia")
     public int daysUntilInsomniaTakesAffect = 5;

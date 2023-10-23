@@ -15,6 +15,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.SpawnHelper;
 import net.minecraft.world.spawner.PhantomSpawner;
@@ -40,15 +41,13 @@ public abstract class PhantomSpawnerMixin implements Spawner {
 	@Unique
 	boolean isInsomniaAllowed = SpectreConfig.getInstance().allowInsomnia;
 
-	@Unique
-	boolean insanityModeActive = SpectreConfig.getInstance().insanityPhantoms;
+	// @Unique
+	// boolean insanityModeActive = SpectreConfig.getInstance().insanityPhantoms;
 
 	@Inject(at = @At("HEAD"), method = "spawn", cancellable = true)
 	private void spectre$spawn(ServerWorld world, boolean spawnsMonsters, boolean spawnsAnimals, CallbackInfoReturnable<Integer> cir) {
-		if (!isInsomniaAllowed && !insanityModeActive) {
+		if (!isInsomniaAllowed) {
 			cir.setReturnValue(0);
-		} else if (insanityModeActive) {
-			cir.setReturnValue(setCustomSpawningConditions(world));
 		} else {
 			cir.setReturnValue(setCustomSpawningConditions(world, spawnsMonsters, spawnsAnimals));
 		}
