@@ -12,6 +12,9 @@ public class SpectreConfig implements ConfigData {
     @Comment("Determines if Phantoms spawn due to the Player not sleeping")
     public boolean allowInsomnia = true;
 
+    @Comment("Determines if Phantoms spawn an ABNORMAL amount")
+    public boolean insanityPhantoms = true;
+
     @Comment("Amount of days before Phantoms can start spawning due to insomnia")
     public int daysUntilInsomniaTakesAffect = 5;
 
