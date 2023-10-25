@@ -46,11 +46,7 @@ public abstract class PhantomSpawnerMixin implements Spawner {
 
 	@Inject(at = @At("HEAD"), method = "spawn", cancellable = true)
 	private void spectre$spawn(ServerWorld world, boolean spawnsMonsters, boolean spawnsAnimals, CallbackInfoReturnable<Integer> cir) {
-		if (!isInsomniaAllowed) {
-			cir.setReturnValue(0);
-		} else {
-			cir.setReturnValue(setCustomSpawningConditions(world, spawnsMonsters, spawnsAnimals));
-		}
+		cir.setReturnValue(setCustomSpawningConditions(world, spawnsMonsters, spawnsAnimals));
 	}
 
 	@Unique
@@ -101,7 +97,7 @@ public abstract class PhantomSpawnerMixin implements Spawner {
 								ServerStatHandler serverStatHandler = serverPlayerEntity.getStatHandler();
 								j = MathHelper.clamp(serverStatHandler.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, Integer.MAX_VALUE);
 								// int k = true;
-							} while(random.nextInt(j) < getInsomniaTicks);
+							} while(random.nextInt(j) > getInsomniaTicks);
 
 							blockPos2 = blockPos.up(20 + random.nextInt(15)).east(-10 + random.nextInt(21)).south(-10 + random.nextInt(21));
 							blockState = world.getBlockState(blockPos2);
@@ -127,7 +123,7 @@ public abstract class PhantomSpawnerMixin implements Spawner {
 	}
 
 	@Unique
-	private int setCustomSpawningConditions(ServerWorld world) {
+	private int setInsanitySpawningConditions(ServerWorld world) {
 		Random random = world.random;
 		int phantomsSpawned = 0;
 		Iterator<?> playerList = world.players.iterator();
