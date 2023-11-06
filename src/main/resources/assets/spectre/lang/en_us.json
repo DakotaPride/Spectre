@@ -53,5 +53,6 @@
   "text.autoconfig.spectre.option.pursuingEffectSeconds": "Pursuing effect inflicted by Gazing duration",
   "text.autoconfig.spectre.option.antiqueCooldown": "Unwearied Antique cooldown duration",
   "text.autoconfig.spectre.option.bloodRushStrengthDuration": "Strength from Blood Rush duration",
-  "text.autoconfig.spectre.option.sanguinaryStrengthDuration": "Strength from Sanguinary duration"
+  "text.autoconfig.spectre.option.sanguinaryStrengthDuration": "Strength from Sanguinary duration",
+  "text.autoconfig.spectre.option.insanityPhantoms": "You don't want this..."
 }
